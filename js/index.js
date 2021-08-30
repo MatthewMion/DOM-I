@@ -46,48 +46,69 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const newTitle = document.querySelector('title')
 newTitle.textContent = 'Great Idea!';
 
-//add text content to nav a tags
+//***add text content to nav a tags***
 
-const newA = document.querySelectorAll('nav a')
-console.log(newA)
-newA[0].textContent = 'Services';
-newA[1].textContent = 'Product';
-newA[2].textContent = 'Vision';
-newA[3].textContent = 'Features';
-newA[4].textContent = 'About';
-newA[5].textContent = 'Contact'
+const newA = Array.from(document.querySelectorAll('nav a'))
+const siteNav = siteContent['nav']
+Object.keys(siteNav).forEach((key, index) => { 
+  if(key.includes('nav-item')){
+newA[index].textContent = siteNav[key]
+  }
+})
 
-//add h1 content
+//***add h1 content***
 
+//use split and join
 const newH1 = document.querySelector('h1');
 newH1.innerText = 'DOM\n Is\n Awesome\n'
+// newH1.innerText = siteContent['cta']['h1']
 
 const newButton = document.querySelector('button')
-newButton.textContent = 'Get Started';
+newButton.textContent = siteContent['cta']['button'];
 
 const newImg = document.querySelector('#cta-img')
-newImg.src = 'img/header-img.png'
+newImg.src = siteContent['cta']['img-src']
 
-//add top content
+//***add top content***
 
-const newH4 = document.querySelectorAll('h4')
-newH4[0].textContent = 'Features';
-newH4[1].textContent = 'About';
-newH4[2].textContent = 'Services';
-newH4[3].textContent = 'Product';
-newH4[4].textContent = 'Vision';
-newH4[5].textContent = 'Contact';
+const newH4 = document.querySelectorAll('.main-content h4')
+const mainContent = siteContent['main-content']
+// console.log(newH4)
+// console.log(mainContent)
+const newMainContentKeys = Object.keys(mainContent).filter(key => key.includes('h4'))
+newMainContentKeys.forEach((key, index) => {
+  newH4[index].textContent = mainContent[key]
+  }
+)
 
-const newP = document.querySelectorAll('p')
-newP[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-newP[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-newP[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-newP[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-newP[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-newP[5].innerText = '123 Way 456 Street\n Somewhere, USA';
-newP[6].textContent = '1 (888) 888-8888';
-newP[7].textContent = 'sales@greatidea.io';
-newP[8].textContent = 'Copyright Great Idea! 2018';
+const newP = document.querySelectorAll('.main-content p')
+const newPKeys = Object.keys(mainContent).filter(key => key.includes('content'))
+newPKeys.forEach((key, index) => {
+    newP[index].textContent = mainContent[key]
+  }
+)
 
 const newMiddleImg = document.querySelector('.middle-img')
 newMiddleImg.src = 'img/mid-page-accent.jpg';
+
+//***Contact Content ***/
+
+
+const newContactH4 = document.querySelector('.contact h4')
+newContactH4.textContent = siteContent['contact']['contact-h4']
+
+const newContactAddress = document.querySelectorAll('.contact p')
+console.log(newContactAddress)
+newContactAddress[0].textContent = siteContent['contact']['address']
+newContactAddress[1].textContent = siteContent['contact']['phone']
+newContactAddress[2].textContent = siteContent['contact']['email']
+
+
+/***Footer***/
+const newFooter = document.querySelector('footer p')
+newFooter.textContent = siteContent['footer']['copyright']
+
+
+
+
+
