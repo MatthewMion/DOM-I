@@ -43,12 +43,12 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 //remove DOM from title
-let newTitle = document.querySelector('title')
-newTitle.textContent = 'Great Idea';
+const newTitle = document.querySelector('title')
+newTitle.textContent = 'Great Idea!';
 
 //add text content to nav a tags
 
-let newA = document.getElementsByTagName('a')
+const newA = document.querySelectorAll('nav a')
 console.log(newA)
 newA[0].textContent = 'Services';
 newA[1].textContent = 'Product';
@@ -59,18 +59,18 @@ newA[5].textContent = 'Contact'
 
 //add h1 content
 
-let newH1 = document.querySelector('h1');
+const newH1 = document.querySelector('h1');
 newH1.innerText = 'DOM\n Is\n Awesome\n'
 
-let newButton = document.querySelector('button')
-newButton.textContent = 'Get Started'; 
+const newButton = document.querySelector('button')
+newButton.textContent = 'Get Started';
 
-let newImg = document.querySelector('#cta-img')
+const newImg = document.querySelector('#cta-img')
 newImg.src = 'img/header-img.png'
 
 //add top content
 
-let newH4 = document.querySelectorAll('h4')
+const newH4 = document.querySelectorAll('h4')
 newH4[0].textContent = 'Features';
 newH4[1].textContent = 'About';
 newH4[2].textContent = 'Services';
@@ -78,7 +78,7 @@ newH4[3].textContent = 'Product';
 newH4[4].textContent = 'Vision';
 newH4[5].textContent = 'Contact';
 
-let newP = document.querySelectorAll('p')
+const newP = document.querySelectorAll('p')
 newP[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 newP[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 newP[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
@@ -89,5 +89,5 @@ newP[6].textContent = '1 (888) 888-8888';
 newP[7].textContent = 'sales@greatidea.io';
 newP[8].textContent = 'Copyright Great Idea! 2018';
 
-let newMiddleImg = document.querySelector('.middle-img')
+const newMiddleImg = document.querySelector('.middle-img')
 newMiddleImg.src = 'img/mid-page-accent.jpg';
