@@ -65,5 +65,29 @@ newH1.innerText = 'DOM\n Is\n Awesome\n'
 let newButton = document.querySelector('button')
 newButton.textContent = 'Get Started'; 
 
-let newImg = document.getElementById('cta-img')
+let newImg = document.querySelector('#cta-img')
 newImg.src = 'img/header-img.png'
+
+//add top content
+
+let newH4 = document.querySelectorAll('h4')
+newH4[0].textContent = 'Features';
+newH4[1].textContent = 'About';
+newH4[2].textContent = 'Services';
+newH4[3].textContent = 'Product';
+newH4[4].textContent = 'Vision';
+newH4[5].textContent = 'Contact';
+
+let newP = document.querySelectorAll('p')
+newP[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+newP[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+newP[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+newP[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+newP[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+newP[5].innerText = '123 Way 456 Street\n Somewhere, USA';
+newP[6].textContent = '1 (888) 888-8888';
+newP[7].textContent = 'sales@greatidea.io';
+newP[8].textContent = 'Copyright Great Idea! 2018';
+
+let newMiddleImg = document.querySelector('.middle-img')
+newMiddleImg.src = 'img/mid-page-accent.jpg';
