@@ -53,15 +53,36 @@ const siteNav = siteContent['nav']
 Object.keys(siteNav).forEach((key, index) => { 
   if(key.includes('nav-item')){
 newA[index].textContent = siteNav[key]
+newA[index].style.color = 'green'
   }
 })
 
+//append and prepend
+// const newNav = document.querySelectorAll('nav')
+// function createNavItem(name){
+//   let nav = document.createElement('nav')
+//   nav.textContent = name;
+//   return nav;
+// }
+
+// newNav.appendChild(createNavItem('Item #1'))
+
+
 //***add h1 content***
 
-//use split and join
+// //use split and join
 const newH1 = document.querySelector('h1');
 newH1.innerText = 'DOM\n Is\n Awesome\n'
-// newH1.innerText = siteContent['cta']['h1']
+// const newH1Split = siteContent['cta']['h1']
+// const newH1String = newH1Split.toString();
+// // console.log(newH1String)
+// let newH1Array = newH1String.split(' ')
+// // console.log(newH1Array)
+// newH1Array2 = newH1Array.join('<br>')
+// console.log(newH1Array2);
+// newH1.innerText = newH1Array2;
+
+
 
 const newButton = document.querySelector('button')
 newButton.textContent = siteContent['cta']['button'];
@@ -98,7 +119,7 @@ const newContactH4 = document.querySelector('.contact h4')
 newContactH4.textContent = siteContent['contact']['contact-h4']
 
 const newContactAddress = document.querySelectorAll('.contact p')
-console.log(newContactAddress)
+// console.log(newContactAddress)
 newContactAddress[0].textContent = siteContent['contact']['address']
 newContactAddress[1].textContent = siteContent['contact']['phone']
 newContactAddress[2].textContent = siteContent['contact']['email']
@@ -107,7 +128,6 @@ newContactAddress[2].textContent = siteContent['contact']['email']
 /***Footer***/
 const newFooter = document.querySelector('footer p')
 newFooter.textContent = siteContent['footer']['copyright']
-
 
 
 
