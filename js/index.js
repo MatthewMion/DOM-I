@@ -58,29 +58,34 @@ newA[index].style.color = 'green'
 })
 
 //append and prepend
-// const newNav = document.querySelectorAll('nav')
-// function createNavItem(name){
-//   let nav = document.createElement('nav')
-//   nav.textContent = name;
-//   return nav;
-// }
 
-// newNav.appendChild(createNavItem('Item #1'))
+//Parent Element
+const navItems =  document.querySelector('nav')
+
+//New Links
+
+let newNav1 = document.createElement('a')
+newNav1.textContent = 'Append'
+navItems.appendChild(newNav1)
+
+let newNav2 = document.createElement('a')
+newNav2.textContent = 'Prepend'
+navItems.prepend(newNav2)
 
 
 //***add h1 content***
 
 // //use split and join
 const newH1 = document.querySelector('h1');
-newH1.innerText = 'DOM\n Is\n Awesome\n'
-// const newH1Split = siteContent['cta']['h1']
-// const newH1String = newH1Split.toString();
-// // console.log(newH1String)
-// let newH1Array = newH1String.split(' ')
-// // console.log(newH1Array)
-// newH1Array2 = newH1Array.join('<br>')
-// console.log(newH1Array2);
-// newH1.innerText = newH1Array2;
+// newH1.innerText = 'DOM\n Is\n Awesome\n'
+const objString = siteContent['cta']['h1'].toString();
+// console.log(objString)
+let brk = objString.split(' ');
+// console.log(brk)
+let joinedBrk = brk.join("\n")
+
+newH1.innerText = joinedBrk
+
 
 
 
@@ -120,6 +125,14 @@ newContactH4.textContent = siteContent['contact']['contact-h4']
 
 const newContactAddress = document.querySelectorAll('.contact p')
 // console.log(newContactAddress)
+
+//use split and join
+
+// const objString2 = siteContent['contact']['address'].toString();
+// console.log(objString2)
+// let brk2 = objString2.split('Street');
+// console.log(brk2)
+// let joinedBrk2 = brk2.join("\n")
 newContactAddress[0].textContent = siteContent['contact']['address']
 newContactAddress[1].textContent = siteContent['contact']['phone']
 newContactAddress[2].textContent = siteContent['contact']['email']
