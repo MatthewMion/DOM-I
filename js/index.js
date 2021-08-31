@@ -128,12 +128,12 @@ const newContactAddress = document.querySelectorAll('.contact p')
 
 //use split and join
 
-// const objString2 = siteContent['contact']['address'].toString();
-// console.log(objString2)
-// let brk2 = objString2.split('Street');
-// console.log(brk2)
-// let joinedBrk2 = brk2.join("\n")
-newContactAddress[0].textContent = siteContent['contact']['address']
+const objString2 = siteContent['contact']['address'].toString();
+console.log(objString2)
+let brk2 = objString2.replace('Street', 'Street\n');
+console.log(brk2)
+
+newContactAddress[0].innerText = brk2
 newContactAddress[1].textContent = siteContent['contact']['phone']
 newContactAddress[2].textContent = siteContent['contact']['email']
 
